@@ -7,7 +7,7 @@ const PrivateRoute = ({component,...rest}) => {
   return token ? (
      //  {...rest} : destructuring props rest
     <Route {...rest} component={ Component } />
-  ):( <Redirect to={{pathname: '/login'}}  />)
+  ):( <Redirect to={{pathname: '/'}}  />)
 }
 
 export default PrivateRoute
