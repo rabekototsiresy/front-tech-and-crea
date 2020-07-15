@@ -59,12 +59,11 @@ const UpdateUser = (props) => {
   const user_R = user.user_role
   const user_E = user.user_etat
  
-  const showBtn = user_N=='' || user_P=='' || user_R=='' ||user_E=='' ? (<Button value={'create user'} disabled={true} />) : (<Button type="submit" value={'create user'} />)
+  const showBtn = user_N=='' || user_P=='' || user_R=='' ||user_E=='' ? (<Button value={'Update user'} disabled={true} />) : (<Button type="submit" value={'Update user'} />)
   
   // get error and success message
   const { successUpdateMsg,errorUpdateMsg }  = userUpdate
-  console.log(successUpdateMsg,errorUpdateMsg)
-
+  
 
   return (
     <div style={custom.divMain} >

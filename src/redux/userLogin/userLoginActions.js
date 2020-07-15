@@ -33,7 +33,7 @@ export const fireLoginFailure = (errorMsg)=>{
 
 export const fireLogin = (dataWithProps)=>{
   return (dispatch)=>{
-    dispatch(fireLoginRequest);
+    dispatch(fireLoginRequest());
     axios.post('http://localhost:4000/login',dataWithProps.user)
     .then( success=>{
       const token = success.data.token

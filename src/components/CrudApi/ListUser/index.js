@@ -1,8 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { fetchUser,getUniqUser,getIdUserUpdate } from '../../../redux'
+import { fetchUser,getUniqUser,getIdUserUpdate,removeMessage } from '../../../redux'
 import axios from 'axios';
-import './../index.css';
 import Button from '../../SousComponents/Button';
 
 
@@ -44,6 +43,7 @@ const ListUser = (props) => {
   const getUser = (id)=>{
     dispatch(getUniqUser(id))
     dispatch(getIdUserUpdate(id))
+    dispatch(removeMessage())
     openModal()
   }
 
